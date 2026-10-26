@@ -1,0 +1,21 @@
+import random
+
+random.seed(42)
+
+first_names = ["Sophea", "Dara", "Vannak", "Srey", "Rithy", "Chantha", "Bopha", "Sokha",
+               "Kunthea", "Piseth", "Maly", "Sambath", "Nary", "Visal", "Leakena"]
+last_names = ["Chan", "Sok", "Lim", "Heng", "Keo", "Meas", "Ly", "Pich"]
+majors = ["IT", "Computer Science", "Design", "Business"]
+
+records = [
+    {
+        "id": i + 1,
+        "name": f"{random.choice(first_names)} {random.choice(last_names)}",
+        "major": random.choice(majors),
+        "credits": random.choice([12, 15, 16, 18, 18, 21]),
+    }
+    for i in range(40)
+]
+
+print(len(records), "records")
+print(records[:3])
